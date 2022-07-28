@@ -3,6 +3,10 @@ provider "aws" {
   profile = "tf_profile"
 }
 
-resource "aws_vpc" "vpc-tf" {
+resource "aws_vpc" "vpc_tf" {
   cidr_block = "10.0.0.0/16"
+
+  tags = {
+    Name = "vpc_tf"
+  }
 }
